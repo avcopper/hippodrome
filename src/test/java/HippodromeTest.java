@@ -12,6 +12,7 @@ public class HippodromeTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Hippodrome(null));
         assertEquals("Horses cannot be null.", exception.getMessage());
     }
+
     @Test
     public void paramConstructorEmptyException() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Hippodrome(new ArrayList<>()));
