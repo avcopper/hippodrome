@@ -1,11 +1,10 @@
+import java.util.List;
+import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class HippodromeTest {
     @Test
@@ -45,9 +44,8 @@ public class HippodromeTest {
     @Test
     public void getWinner() {
         Horse horse1 = new Horse("Test1", 1, 1);
-        Horse horse2 = new Horse("Test1", 1, 5);
-        Horse horse3 = new Horse("Test1", 1, 3);
-
+        Horse horse2 = new Horse("Test2", 2, 5);
+        Horse horse3 = new Horse("Test3", 3, 3);
         Hippodrome hippodrome = new Hippodrome(List.of(horse1, horse2, horse3));
         assertSame(horse2, hippodrome.getWinner());
     }
